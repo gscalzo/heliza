@@ -1,3 +1,4 @@
 main = do
-    keywords <- readFile "keywords.txt"
-    print keywords 
+    kContens <- readFile "keywords.txt"
+    let keywords = lines kContens
+    print keywords
