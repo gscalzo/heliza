@@ -1,0 +1,33 @@
+Name:                   heliza
+Version:                0.0.1
+Author:                 Giordano Scalzo <giordano.scalzo@gmail.com>
+Maintainer:             Giordano Scalzo <giordano.scalzo@gmail.com>
+License:                BSD3
+License-File:           LICENSE
+-- Synopsis:               
+-- Description:            
+Cabal-Version:          >= 1.10
+Build-Type:             Simple
+Data-Files:             data/keywords.txt  
+
+Executable Heliza
+  Main-Is:              Main.hs
+  Default-Language:     Haskell2010
+  Hs-Source-Dirs:       src
+                      , test
+  GHC-Options:          -Wall
+  Build-Depends:        base >= 4 && < 5
+
+Test-Suite spec
+  Type:                 exitcode-stdio-1.0
+  Default-Language:     Haskell2010
+  Hs-Source-Dirs:       src
+                      , test
+  Ghc-Options:          -Wall
+  Main-Is:              Spec.hs
+  Build-Depends:        base
+                      , hspec
+
+Source-Repository head
+  Type:                 git
+--  Location:             
