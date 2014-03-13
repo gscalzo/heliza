@@ -5,8 +5,12 @@ import Paths_heliza
 
 main :: IO ()
 main = do
-    print $ pippo 1
-    file <- getDataFileName "data/keywords.txt"
-    kContens <- readFile file
-    let keywords = lines kContens
-    print keywords
+      s <- getContents
+      let r = map processIt (lines s)
+      putStr (unlines r)
+    --file <- getDataFileName "data/keywords.txt"
+    --kContens <- readFile file
+    --let keywords = lines kContens
+    --print keywords
+
+processIt s = "You insert a string of " ++ show (length s) ++ " characters"
