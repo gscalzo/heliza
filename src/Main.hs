@@ -1,7 +1,7 @@
 module Main where
 
-import Heliza.Internal
-import Paths_heliza
+--import Heliza.Internal
+--import Paths_heliza
 
 main :: IO ()
 main = do
@@ -13,4 +13,5 @@ main = do
     --let keywords = lines kContens
     --print keywords
 
+processIt :: String -> String
 processIt s = "You insert a string of " ++ show (length s) ++ " characters"

@@ -2,8 +2,7 @@ module Heliza.Internal
     (
         compact,
         upCase,
-        pippo,
-        firstWord
+        purify,
     ) where
 
 import Data.Char
@@ -16,9 +15,5 @@ compact (x:xs)    = x : compact xs
 upCase :: String -> String
 upCase = map toUpper
 
-
-pippo :: Integer -> [Char]
-pippo x = "Pippo"
-
-firstWord :: [String] -> String
-firstWord list = head list
+purify :: String -> String
+purify = upCase . compact

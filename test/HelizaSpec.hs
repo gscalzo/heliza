@@ -21,11 +21,7 @@ spec = do
     it "should handle empty string" $ do
         (upCase "") `shouldBe` ""
 
-  describe "firstWord" $ do
-    it "should return first word of a list of words" $ do
-        file <- getDataFileName "data/keywords.txt"
-        kContens <- readFile file
-        --kContens `shouldBe`"aaa"
-        let keywords = lines kContens
+  describe "purify" $ do
+    it "should return string without apostrophes in uppercase" $ do
+        (purify "I'm A ib'M 37'0") `shouldBe` "IM A IBM 370"
 
-        (firstWord keywords) `shouldBe` "CAN YOU"
