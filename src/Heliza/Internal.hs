@@ -1,6 +1,6 @@
 module Heliza.Internal
     (
-        compatter,
+        compact,
         upCase,
         pippo,
         firstWord
@@ -8,10 +8,10 @@ module Heliza.Internal
 
 import Data.Char
 
-compatter :: String -> String
-compatter []        = []
-compatter ('\'':xs) = compatter xs
-compatter (x:xs)    = x : compatter xs    
+compact :: String -> String
+compact []        = []
+compact ('\'':xs) = compact xs
+compact (x:xs)    = x : compact xs    
 
 upCase :: String -> String
 upCase = map toUpper

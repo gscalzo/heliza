@@ -9,9 +9,9 @@ main = hspec spec
 
 spec :: Spec
 spec = do
-  describe "compatter" $ do
+  describe "compact" $ do
     it "should return string without apostrophes" $ do
-        (compatter "I'M A IB'M 37'0") `shouldBe` "IM A IBM 370"
+        (compact "I'M A IB'M 37'0") `shouldBe` "IM A IBM 370"
 
   describe "upCase" $ do
     it "should return string in uppercase" $ do
