@@ -9,9 +9,9 @@ main = hspec spec
 
 spec :: Spec
 spec = do
-  describe "pippo" $ do
-    it "should return its name" $ do
-        (pippo 1) `shouldBe` "Pippo"
+  describe "compatter" $ do
+    it "should return string without apostrophes" $ do
+        (compatter "I'M A IB'M 37'0") `shouldBe` "IM A IBM 370"
 
   describe "firstWord" $ do
     it "should return first word of a list of words" $ do
