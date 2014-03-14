@@ -7,9 +7,9 @@ module Heliza.Internal
 
 
 compatter :: String -> String
-compatter []       = []
+compatter []        = []
 compatter ('\'':xs) = compatter xs
-compatter (x:xs)   = x : compatter xs    
+compatter (x:xs)    = x : compatter xs    
 
 
 pippo :: Integer -> [Char]
